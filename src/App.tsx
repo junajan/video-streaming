@@ -82,6 +82,7 @@ function App() {
       <div className="player-wrapper">
         {videoSrc ? (
           <video 
+            key={videoSrc}
             ref={videoRef}
             controls 
             autoPlay 
