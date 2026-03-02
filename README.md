@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Modern Stream Player 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, privacy-focused web application that allows you to stream local video files directly in your browser with full subtitle support. No files are ever uploaded to a server; everything happens locally using the browser's Blob and URL APIs.
 
-Currently, two official plugins are available:
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Local Streaming:** Play any video file supported by your browser (MP4, WebM, OGG).
+- **Subtitle Support:** Attach `.vtt` or `.srt` files. 
+- **Auto-Conversion:** Automatically converts legacy `.srt` subtitles to the modern `.vtt` format on-the-fly.
+- **Interactive UI:** 
+  - Drag-and-drop support for both videos and subtitles.
+  - Modern dark-mode interface.
+  - Responsive design.
+- **Privacy First:** Your media stays on your computer. No data is sent to any external server.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Quick Start
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm or yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/junajan/video-streaming.git
+   cd video-streaming
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📖 How to Use
+
+1. **Select Video:** Click "Choose Video" or simply drag and drop a video file onto the player area.
+2. **Add Subtitles:** Click "Choose Subtitles" or drag an `.srt` or `.vtt` file onto the subtitle selector.
+3. **Control:** Use the standard player controls to play, pause, seek, and toggle subtitles.
+
+## 🛠️ Tech Stack
+
+- **Framework:** React 19
+- **Language:** TypeScript
+- **Bundler:** Vite
+- **Styling:** Vanilla CSS (Modern CSS Variables & Flexbox)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
