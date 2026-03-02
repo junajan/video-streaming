@@ -8,7 +8,9 @@ A lightweight, privacy-focused web application that allows you to stream local v
 
 ## ✨ Features
 
-- **Local Streaming:** Play any video file supported by your browser (MP4, WebM, OGG).
+- **Local Streaming:** Play video files directly in your browser.
+  - **Supported Formats:** MP4, WebM, OGG, and MKV (`.mkv`).
+  - *Note: Playback support for MKV and specific codecs depends on your browser's native capabilities.*
 - **Subtitle Support:** Attach `.vtt` or `.srt` files. 
 - **Auto-Conversion:** Automatically converts legacy `.srt` subtitles to the modern `.vtt` format on-the-fly.
 - **Interactive UI:** 
