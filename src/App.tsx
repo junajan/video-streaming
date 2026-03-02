@@ -90,6 +90,7 @@ function App() {
             <source src={videoSrc} type="video/mp4" />
             <source src={videoSrc} type="video/webm" />
             <source src={videoSrc} type="video/ogg" />
+            <source src={videoSrc} type="video/x-matroska" />
             
             {subtitleSrc && (
               <track 
@@ -109,7 +110,7 @@ function App() {
             onDragLeave={(e) => onDragLeave(e, setIsDraggingVideo)}
             onDrop={(e) => onDrop(e, processVideoFile, setIsDraggingVideo)}
           >
-            <p>{isDraggingVideo ? "Drop to Play!" : "Select or drag a video file to start streaming."}</p>
+            <p>{isDraggingVideo ? "Drop to Play!" : "Select or drag a video file (MP4, WebM, MKV) to start streaming."}</p>
           </div>
         )}
 
@@ -125,7 +126,7 @@ function App() {
               {isDraggingVideo ? "Drop it here!" : "Choose or Drag Video"}
               <input 
                 type="file" 
-                accept="video/*" 
+                accept="video/*,.mkv" 
                 onChange={handleVideoSelect} 
               />
             </label>
